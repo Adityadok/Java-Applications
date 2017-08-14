@@ -1,0 +1,109 @@
+        <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>com.sap.it.perf.profiling</groupId>
+        <artifactId>com.sap.it.perf.profiling.automation</artifactId>
+        <version>1.0.0</version>
+        <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        </properties>
+  
+  
+        <dependencies>
+		<dependency>
+		<groupId>jvmx_tools</groupId>
+		<artifactId>jvmx_tools</artifactId>
+		<version>0</version>
+		<scope>system</scope>
+		<systemPath>${basedir}\lib\jvmx_tools.jar</systemPath>
+		</dependency>
+		
+		
+		<dependency>
+		<groupId>jvmx_tools_impl</groupId>
+		<artifactId>jvmx_tools_impl</artifactId>
+		<version>0</version>
+		<scope>system</scope>
+		<systemPath>${basedir}\lib\jvmx_tools_impl.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+		<groupId>commons-codec</groupId>
+		<artifactId>commons-codec</artifactId>
+		<version>1.4</version>
+		<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+		<groupId>commons-cli</groupId>
+		<artifactId>commons-cli</artifactId>
+		<version>1.2</version>
+		<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>httpclient</artifactId>
+		<version>4.1.1</version>
+		<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>httpcore</artifactId>
+		<version>4.1.1</version>
+		<scope>compile</scope>
+		</dependency>
+		
+        <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.4</version>
+        <scope>test</scope>
+        </dependency>
+           
+        <dependency>
+        <groupId>com.sap.jvm</groupId>
+        <artifactId>com.sap.jvm.api</artifactId>
+        <version>1.1.008</version>
+        </dependency>
+        
+        <dependency>
+		<groupId>debugging</groupId>
+		<artifactId>debugging_2.2_backend</artifactId>
+		<version>2.2</version>
+		<scope>system</scope>
+		<systemPath>${basedir}\lib\debugging_2.2_backend.jar</systemPath>
+		</dependency>
+      
+        </dependencies>
+
+		<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.sap.it.perf.profiling.SAPJVMCloudProfiling</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<!-- this is used for inheritance merges -->
+						<phase>package</phase>
+						<!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>
