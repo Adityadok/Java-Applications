@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="PASSWORD" value="Initial0"/>
+  <parameter name="INPUT_ID" value="1070080143"/>
+  <parameter name="USERNAME" value="PRISMAPPROVER"/>
+  <parameter name="URL" value="https://avtprsmfsnbcavtprsm.int.sap.hana.ondemand.com/prism/fsn/bc/workspace/"/>
+  <parameter name="driverOption" value="chrome"/>
+  <test name="Test(failed)">
+    <parameter name="PASSWORD" value="Initial0"/>
+    <parameter name="INPUT_ID" value="1070080143"/>
+    <parameter name="USERNAME" value="PRISMAPPROVER"/>
+    <parameter name="URL" value="https://avtprsmfsnbcavtprsm.int.sap.hana.ondemand.com/prism/fsn/bc/workspace/"/>
+    <parameter name="driverOption" value="chrome"/>
+    <classes>
+      <class name="fsn_bc_scope1.Fsn_Bc_Automation_Primary">
+        <methods>
+          <include name="scenarioQuit"/>
+          <include name="onStart" invocation-numbers="0"/>
+          <include name="scenarioStart"/>
+        </methods>
+      </class> <!-- fsn_bc_scope1.Fsn_Bc_Automation_Primary -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

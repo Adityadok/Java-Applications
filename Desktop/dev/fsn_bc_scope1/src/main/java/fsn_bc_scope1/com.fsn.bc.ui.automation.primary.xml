@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel= "false">
+<test name="Test">
+ <parameter name="URL" value="https://avtprsmfsnbcavtprsm.int.sap.hana.ondemand.com/prism/fsn/bc/workspace/"/>
+<parameter name="USERNAME" value="PRISMAPPROVER"/>
+<parameter name="PASSWORD" value="Initial0"/>
+<parameter name="driverOption" value="chrome"/>
+<parameter name="INPUT_ID" value="1070080143"/> 
+<classes>
+<class name="fsn_bc_scope1.Fsn_Bc_Automation_Primary"/>
+</classes>
+</test>
+</suite>
