@@ -3,8 +3,8 @@
 <suite name="Suite" parallel= "false">
 <test name="Test">
  <parameter name="URL" value="https://avtprsmfsnbcavtprsm.int.sap.hana.ondemand.com/prism/fsn/bc/workspace/"/>
-<parameter name="USERNAME" value="PRISMAPPROVER"/>
-<parameter name="PASSWORD" value="Initial0"/>
+<parameter name="USERNAME" value="XXXXXXXXXX"/>
+<parameter name="PASSWORD" value="XXXXXXX"/>
 <parameter name="driverOption" value="chrome"/>
 <parameter name="INPUT_ID" value="1070080143"/> 
 <classes>
